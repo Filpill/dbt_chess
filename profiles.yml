@@ -37,7 +37,7 @@ dbt_chess:
     airflow:
       type: bigquery
       method: service-account
-      keyfile: /keys/checkmate-453316.json
+      keyfile: /keys/checkmate-airflow.json
       project: checkmate-453316
       dataset: airflow
       location: EU
