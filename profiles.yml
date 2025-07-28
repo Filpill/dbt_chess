@@ -35,11 +35,11 @@ dbt_chess:
       type: bigquery
 
     airflow:
+      dataset: dev
       type: bigquery
       method: service-account
       keyfile: /keys/checkmate-airflow.json
       project: checkmate-453316
-      dataset: airflow
       location: EU
       threads: 4
       job_execution_timeout_seconds: 300
