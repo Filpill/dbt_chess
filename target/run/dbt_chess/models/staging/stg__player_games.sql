@@ -97,7 +97,7 @@ FROM cte_white_black_union t
 WHERE 1=1 
   
   
-    AND t.game_date BETWEEN CURRENT_DATE() - 30 AND CURRENT_DATE()
+    AND t.game_date >= CURRENT_DATE() - 40
   
 
     );

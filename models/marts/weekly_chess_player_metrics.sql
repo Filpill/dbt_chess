@@ -30,7 +30,7 @@ WITH cte_date_aggregate AS (
       LEFT JOIN {{ ref("calendar") }} cal
         ON t.game_date = cal.cal_date
       WHERE 1=1
-        {{ last_n_days_filter("t.game_date") }}
+        {{ incremental_isoweek_filter("t.game_date") }}
         AND t.rated = TRUE
         AND t.rules = "chess"
       GROUP BY ALL

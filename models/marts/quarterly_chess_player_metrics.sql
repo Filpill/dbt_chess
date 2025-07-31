@@ -32,7 +32,7 @@ WITH cte_date_aggregate AS (
       LEFT JOIN {{ ref("opening_mapping") }} map
           ON t.opening = map.opening
       WHERE 1=1
-        {{ last_n_days_filter("t.game_date") }}
+        {{ incremental_quarter_filter("t.game_date") }}
         AND t.rated = TRUE
         AND t.rules = "chess"
       GROUP BY ALL

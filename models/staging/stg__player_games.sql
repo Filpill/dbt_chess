@@ -81,4 +81,4 @@ SELECT
 FROM cte_white_black_union t
 
 WHERE 1=1 
-  {{ last_n_days_filter("t.game_date") }}
+  {{ incremental_day_filter("t.game_date") }}

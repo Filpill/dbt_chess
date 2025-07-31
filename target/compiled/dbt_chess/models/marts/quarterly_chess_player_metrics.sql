@@ -23,7 +23,7 @@ WITH cte_date_aggregate AS (
       WHERE 1=1
         
   
-    AND t.game_date BETWEEN CURRENT_DATE() - 30 AND CURRENT_DATE()
+    AND t.game_date >= DATE_TRUNC(CURRENT_DATE - 40 , QUARTER)
   
 
         AND t.rated = TRUE
